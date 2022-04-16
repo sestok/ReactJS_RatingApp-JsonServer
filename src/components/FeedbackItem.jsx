@@ -6,7 +6,7 @@ function FeedbackItem({item}) {
     <Card>
         <div className="num-display">{item.rating}</div>
         <button className="close">
-            <FaTimes color='purple'/>
+            <FaTimes color='black'/>
         </button>
         <div className="text-display">{item.text}</div>
     </Card>

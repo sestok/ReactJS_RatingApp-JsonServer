@@ -12,9 +12,10 @@ function FeedbackStats({feedback}) {
   return (
     <div className='feedback-stats'>
         <h4>{feedback.length} Feedbacks</h4>
-        <h4>Average Feedbacks: {isNaN(average) ? 0 : average}</h4>
+        <h4>Average: {isNaN(average) ? 0 : average}</h4>
     </div>
   )
+   
 }
 
 FeedbackStats.propTypes = {

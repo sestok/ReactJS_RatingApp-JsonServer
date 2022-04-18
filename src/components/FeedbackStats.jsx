@@ -13,7 +13,7 @@ function FeedbackStats() {
   average = average.toFixed(1).replace(/[.,]0$/, '')
 
   return (
-    <div className="feedback-stats">
+    <div className='feedback-stats'>
       <h4>{feedback.length} Feedbacks</h4>
       <h4>Average: {isNaN(average) ? 0 : average}</h4>
     </div>

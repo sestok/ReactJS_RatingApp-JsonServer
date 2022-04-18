@@ -13,11 +13,11 @@ function App() {
     <FeedbackProvider>
       <Router>
         <Header />
-        <div className="container">
+        <div className='container'>
           <Routes>
             <Route
               eaxt
-              path="/"
+              path='/'
               element={
                 <>
                   <FeedbackForm />
@@ -26,7 +26,7 @@ function App() {
                 </>
               }
             ></Route>
-            <Route path="/about" element={<AboutProject />} />
+            <Route path='/about' element={<AboutProject />} />
           </Routes>
           <AboutLink />
         </div>

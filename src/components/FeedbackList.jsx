@@ -11,7 +11,7 @@ function FeedbackList() {
   }
 
   return (
-    <div className="feedback-list">
+    <div className='feedback-list'>
       <AnimatePresence>
         {feedback.map((item) => (
           <motion.div

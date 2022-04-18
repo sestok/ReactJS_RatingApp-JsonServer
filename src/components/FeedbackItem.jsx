@@ -1,10 +1,10 @@
 import Card from './shared/Card'
 import { FaTimes, FaPen } from 'react-icons/fa'
-import { createContext, useContext } from 'react'
+import { useContext } from 'react'
 import FeedbackContext from '../context/FeedbackContext'
 
 function FeedbackItem({ item }) {
-  const { deleteFeedback } = useContext(FeedbackContext)
+  const { deleteFeedback, editFeedback } = useContext(FeedbackContext)
 
   return (
     <Card>
@@ -12,7 +12,7 @@ function FeedbackItem({ item }) {
       <button className='close' onClick={() => deleteFeedback(item.id)}>
         <FaTimes color='purple' />
       </button>
-      <button className='edit'>
+      <button className='edit' onClick={() => editFeedback(item)}>
         <FaPen color='purple' />
       </button>
       <div className='text-display'>{item.text}</div>

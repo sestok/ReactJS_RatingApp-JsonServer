@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import { useContext } from 'react'
+import { useContext, useState, useEffect } from 'react'
 import FeedbackContext from '../context/FeedbackContext'
 import Card from './shared/Card'
 import Button from './shared/Button'
@@ -11,7 +10,11 @@ function FeedbackForm() {
   const [btnDisabled, setBtnDisabled] = useState(true)
   const [message, setMessage] = useState('')
 
-  const {addFeedback} = useContext(FeedbackContext)
+  const { addFeedback, feedbackEdit } = useContext(FeedbackContext)
+
+  useEffect(() =>{
+
+  }, [feedbackEdit])
 
   const handleTextChange = (e) => {
     if (text === '') {
@@ -47,19 +50,19 @@ function FeedbackForm() {
       <form onSubmit={handleSubmit}>
         <h2>Do you like tha app?</h2>
         <RatingSelect select={(rating) => setRating(rating)} />
-        <div className="input-group">
+        <div className='input-group'>
           <input
             onChange={handleTextChange}
-            type="text"
-            placeholder="Write your opinion..."
+            type='text'
+            placeholder='Write your opinion...'
             value={text}
           />
-          <Button type="submit" isDisabled={btnDisabled}>
+          <Button type='submit' isDisabled={btnDisabled}>
             Submit
           </Button>
         </div>
 
-        {message && <div className="message">{message}</div>}
+        {message && <div className='message'>{message}</div>}
       </form>
     </Card>
   )

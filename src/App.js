@@ -8,40 +8,49 @@ import FeedbackForm from './components/FeedbackForm'
 import FeedbackData from './data/FeedbackData'
 import AboutProject from './about/AboutProject'
 import AboutLink from './components/AboutLink'
+import { FeedbackProvider } from './context/FeedbackContext'
 
 function App() {
-    const [feedback, setFeedback] = useState(FeedbackData)
-    
-    const addFeedback = (newFeedback) => {
-        newFeedback.id = uuidv4()
-        setFeedback([newFeedback, ...feedback])   
-    }
+  const [feedback, setFeedback] = useState(FeedbackData)
 
-    const deleteFeedback = (id) => {
-        if(window.confirm('Wanna delete it?')) {
-            setFeedback(feedback.filter((item) => item.id !== id))
-        } 
-    }
+  const addFeedback = (newFeedback) => {
+    newFeedback.id = uuidv4()
+    setFeedback([newFeedback, ...feedback])
+  }
 
-    return (
-    <Router>
+  const deleteFeedback = (id) => {
+    if (window.confirm('Wanna delete it?')) {
+      setFeedback(feedback.filter((item) => item.id !== id))
+    }
+  }
+
+  return (
+    <FeedbackProvider>
+      <Router>
         <Header />
-        <div className='container'>
-            <Routes>
-            <Route eaxt path='/' element={
+        <div className="container">
+          <Routes>
+            <Route
+              eaxt
+              path="/"
+              element={
                 <>
-                <FeedbackForm handleAdd={addFeedback}/>
-                <FeedbackStats feedback={feedback}/>
-                <FeedbackList feedback={feedback} handleDelete={deleteFeedback}/>
+                  <FeedbackForm handleAdd={addFeedback} />
+                  <FeedbackStats feedback={feedback} />
+                  <FeedbackList
+                    feedback={feedback}
+                    handleDelete={deleteFeedback}
+                  />
                 </>
-            }>
-           </Route>
-           <Route path='/about' element={<AboutProject />} />
-           </Routes>
-           <AboutLink />
+              }
+            ></Route>
+            <Route path="/about" element={<AboutProject />} />
+          </Routes>
+          <AboutLink />
         </div>
-    </Router>
-    )
+      </Router>
+    </FeedbackProvider>
+  )
 }
 
 export default App

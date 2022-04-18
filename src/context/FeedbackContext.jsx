@@ -28,6 +28,10 @@ export const FeedbackProvider = ({ children }) => {
     }
   }
 
+  const updateFeedack = (id, updatedItem) => {
+    console.log(id, updatedItem)
+  }
+
   const editFeedback = (item) => {
     setFeedbackEdit({
       item,
@@ -42,6 +46,7 @@ export const FeedbackProvider = ({ children }) => {
         deleteFeedback,
         addFeedback,
         editFeedback,
+        updateFeedack,
         feedbackEdit,
       }}
     >

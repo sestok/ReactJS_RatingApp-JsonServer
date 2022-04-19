@@ -6,3 +6,8 @@
 [![Trending topics](https://images.repography.com/25016656/samiabdalla/ReactJS_RatingApp-JsonServer/recent-activity/0cbbd77d968b6dedab267ce7eecce40d_words.svg)](https://github.com/samiabdalla/ReactJS_RatingApp-JsonServer/commits)
 [![Top contributors](https://images.repography.com/25016656/samiabdalla/ReactJS_RatingApp-JsonServer/recent-activity/0cbbd77d968b6dedab267ce7eecce40d_users.svg)](https://github.com/samiabdalla/ReactJS_RatingApp-JsonServer/graphs/contributors)
 
+# Running this Project
+
+You need to install & run `JSON-Server` on your local machine `localhost` to run this project, or you can simply design your own backend and start digging into it.
+
+[JSON-Server](https://www.npmjs.com/package/json-server)

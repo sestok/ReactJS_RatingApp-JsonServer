@@ -1,3 +1,4 @@
+import React from 'react'
 import Card from './shared/Card'
 import { FaTimes, FaPen } from 'react-icons/fa'
 import { useContext } from 'react'

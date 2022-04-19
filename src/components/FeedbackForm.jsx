@@ -1,3 +1,4 @@
+import React from 'react'
 import { useContext, useState, useEffect } from 'react'
 import FeedbackContext from '../context/FeedbackContext'
 import Card from './shared/Card'

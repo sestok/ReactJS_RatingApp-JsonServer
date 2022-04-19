@@ -15,7 +15,7 @@ function Header({ text, bgColor, textColor }) {
 }
 
 Header.defaultProps = {
-  text: 'Feedback App w/React',
+  text: 'Rating App w/React & JSON/BackEnd',
   bgColor: 'rgba(0,0,0,0.4)',
   textColor: '#ff6a95',
 }
